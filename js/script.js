@@ -1,11 +1,20 @@
 // fare 2 menu diverse?? o cercare su internet come gestire responsive?
-$(document).ready(
-  function(){
-    $('.menu > li').mouseenter(
-      function(){
-        console.log('ciao');
-      }
+// enter/leave menu
 
-    );
-  }
-);
+$('.parent-dropdown')
+  .mouseenter(function() {
+    $(this).children('.dropdown').show();
+  })
+  .mouseleave(function() {
+    $(this).children('.dropdown').hide();
+  });
+
+
+// on click dropdown menu
+// $(document).ready(function() {
+//
+//   $('.parent-dropdown').click(function() {
+//     $(this).children('.dropdown').toggleClass('hide, show');
+//   });
+//
+// });
