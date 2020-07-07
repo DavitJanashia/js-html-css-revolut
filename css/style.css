@@ -9,7 +9,7 @@
 body, html, .my-all-box {
   width: 100%;
   height: 100vh;
-  font-family: arial, monospace;
+  font-family: 'Noto Sans TC', sans-serif;
   position: relative;
 }
 
@@ -35,8 +35,9 @@ a:hover{
   color: black;
 }
 
+
 #header-logo{
-  width: 95px;
+  width: 103px;
 }
 
 .navbar-fixed{
@@ -60,7 +61,7 @@ a:hover{
 }
 
 .my-all-box > * > *{
-  width: 80%;
+  width: 90%;
 }
 
 .fixed-content-left, .fixed-content-right{
@@ -79,16 +80,19 @@ a:hover{
 }
 .menu{
   display: flex;
-  padding-left: 55px;
-  font-size: 15px;
+  padding-left: 20px;
+  font-size: 15.5px;
   /* DEBUG:  */
   width: calc(100% - 300px);
 }
 
-.menu li{
+.menu > li{
   padding: 28px;
 }
-
+.inner li{
+  padding: 0 28px;
+  margin: 30px 0;
+}
 /* prova */
 
 .parent-dropdown{
@@ -96,12 +100,16 @@ a:hover{
 }
 
 .dropdown{
-  top: 30px;
   position: absolute;
-  background: red;
-  width: 200px;
-  height: 400px;
+  top: 63px;
+  left: 0;
+  background: white;
+  box-shadow: 0  5px 17px 2px rgba(0, 0, 0, 0.1);
+  border:none;
+  border-radius: 7px;
   display: none;
+  /* nowrap è utile */
+  white-space: nowrap
 }
 .inner{
   width: 100%;
@@ -131,7 +139,9 @@ a:hover{
 .hamburger-menu{
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 72px);
+  overflow-y: auto;
+  overflow-x: hidden;
   top:0;
   left: 0;
   z-index: 1;
@@ -143,11 +153,23 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #f3f4f5;
+  height: 95px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .h-fixed-content-left{
   display: flex;
 }
-
+.h-fixed-content-left li{
+  padding-right: 30px;
+}
+.h-menu {
+  font-size: 17px;
+}
+.h-menu > li, .h-bottom-menu > li{
+  margin: 33px 0;
+}
 .h-line{
   display: flex;
   justify-content: space-between;
@@ -158,15 +180,33 @@ a:hover{
 
 .my-carica-app-button{
   background-color: black;
-  padding: 15px 16px;
+  padding: 11px 16px;
   border-radius: 11px;
   color: white;
   font-size: 14px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .my-carica-app-button:hover{
   color: white;
-  background-color: grey;
+  background-color: #3d4043;
+}
+#my-close{
+  font-size: 20px;
+}
+.h-menu, .h-bottom-menu{
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.h-menu .fa-angle-down, .h-bottom-menu .fa-angle-down{
+  color: grey;
+  font-size: 13.8px;
+}
+
+.h-menu > li:last-child{
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid lightgrey;
 }
 /* griglia */
 
@@ -222,7 +262,7 @@ a:hover{
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 991px) {
+@media (max-width: 1080px) {
 .navbar-fixed{
   display: none;
 }
@@ -232,10 +272,12 @@ a:hover{
 .menu{
   display: none;
 }
-.app-button{
+.app-button.n1{
   display: none;
 }
 .hamburger-icon{
+  position: relative;
+  bottom: 12px;
   display: flex;
 }
 .hamburger-icon > *{
@@ -243,18 +285,50 @@ a:hover{
   padding: 0;
 }
 
+.app-button.n2{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  z-index: 1;
+}
+.h-inner li{
+  margin: 30px 0;
+}
+
+.h-inner li:first-child{
+  padding-top: 5px;
+}
+.h-inner li a{
+  color: #a0a8af;
+  font-size: 14.8px;
+}
+
+.h-inner li a:hover{
+  color: black;
+}
+
+.h-inner li a{
+  color: #a0a8af;
+  font-size: 14.8px;
+}
+
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 1081px) {
   .hamburger-menu{
-    display: none;
+    display: none!important;
   }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .hamburger-menu{
-    display: none;
-  }
+
 }

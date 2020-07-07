@@ -10,7 +10,7 @@ $('.parent-dropdown')
   });
 
 $('.h-parent-dropdown').click(function(){
-  $(this).children('.h-dropdown').toggle();
+  $(this).children('.h-dropdown').slideToggle();
 });
 
 // on click dropdown menu
@@ -25,11 +25,11 @@ $('.h-parent-dropdown').click(function(){
 
   $('.hamburger-icon').click(function() {
     // $(this).children('.dropdown').toggleClass('hide, show');
-    $('.hamburger-menu').removeClass('hide').addClass('show');
+    $('.hamburger-menu').fadeIn(200)
   });
 
   $('#my-close').click(function(){
-    $('.hamburger-menu').removeClass('show').addClass('hide');
+    $('.hamburger-menu').fadeOut(100);
   });
 
 });
