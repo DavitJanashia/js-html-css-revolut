@@ -5,12 +5,23 @@
   /* border:1px solid black;
   padding:5px; */
 }
+.main *{
+  /* DEBUG:  */
+  /* border:1px solid black; */
+  padding:5px;
+}
 
-body, html, .my-all-box {
+body, html {
   width: 100%;
   height: 100vh;
   font-family: 'Noto Sans TC', sans-serif;
   position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.header, .main{
+  width: 100%;
 }
 
 
@@ -55,12 +66,12 @@ a:hover{
   height: 120px;
 }
 
-.my-all-box > * {
+.header > * {
   display: flex;
   justify-content: center;
 }
 
-.my-all-box > * > *{
+.header > * > *{
   width: 90%;
 }
 
@@ -139,7 +150,7 @@ a:hover{
 .hamburger-menu{
   position: absolute;
   width: 100%;
-  height: calc(100vh - 72px);
+  height: calc(100vh);
   overflow-y: auto;
   overflow-x: hidden;
   top:0;
@@ -208,51 +219,53 @@ a:hover{
   padding-bottom: 40px;
   border-bottom: 1px solid lightgrey;
 }
-/* griglia */
 
-/* GRID */
+/* main */
 
-/* .my-grid-container{
-  width: 100%;
-  height: 100vh;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:50% 25vh auto;
-
-  grid-column-gap:;
-  grid-row-gap:;
+.main{
+  display: flex;
+  justify-content: center;
 }
 
-.my-grid-container.one{
-  grid-column: 1 / 2;
+.main-content{
+  width: 90%;
+  display: flex;
+}
+.main-left{
+  width: 50%;
+  padding-top: 7.5rem;
+}
+.main-left > *{
+  display: flex;
+  justify-content: center;
+  text-align: left;
 }
 
-.my-grid-container.two{
-  grid-column: 2 / 3;
-  background-color: red;
+.main-left h2{
+  font-size: 75px;
+  font-family: arial;
+  font-weight: bold;
 }
 
-.my-grid-container.three{
-  grid-column: 3 / 4;
-} */
+.main-left > p{
+  color: #a0a8af;
+  font-size: 17px;
+  margin-top: 20px;
+}
+.main-right{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+}
 
-/* .my-grid-container.n2{
-  width: 100%;
-  height: 100vh;
-
-  display: grid;
-  grid-template-columns: repeat(2, 350px 60px) 10%;
-  grid-template-rows:50% 25vh auto;
-
-  grid-column-gap: 20px;
-  grid-row-gap: 30px;
-} */
+.main-right img{
+  width: 500px;
+  overflow: hidden;
+}
 
 
-/* FLEX */
-
-/* ANIMATIONS / TRANSITIONS */
 
 
 /* media query */
@@ -319,6 +332,37 @@ a:hover{
   font-size: 14.8px;
 }
 
+/* main */
+.main-content{
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-left{
+  width: 100%;
+  padding-top: 0;
+}
+.main-right{
+  width: 100%;
+  padding-top: 0;
+}
+
+.main-left h2{
+  font-size: 45px;
+  font-family: arial;
+  font-weight: bold;
+}
+.main-left > *{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-right img{
+  min-width: 300px;
+  overflow: hidden;
+}
 }
 
 /* Large devices (desktops, 992px and up) */
