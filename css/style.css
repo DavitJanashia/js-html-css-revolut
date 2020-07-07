@@ -82,7 +82,7 @@ a:hover{
   padding-left: 55px;
   font-size: 15px;
   /* DEBUG:  */
-  width: calc(100% - 200px);
+  width: calc(100% - 300px);
 }
 
 .menu li{
@@ -156,7 +156,18 @@ a:hover{
   display: none;
 }
 
-
+.my-carica-app-button{
+  background-color: black;
+  padding: 15px 16px;
+  border-radius: 11px;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.my-carica-app-button:hover{
+  color: white;
+  background-color: grey;
+}
 /* griglia */
 
 /* GRID */
