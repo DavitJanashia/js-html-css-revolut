@@ -116,6 +116,10 @@ a{
   display: flex;
   justify-content: space-between;
 }
+.h-dropdown{
+  display: none;
+}
+
 /* griglia */
 
 /* GRID */
@@ -187,12 +191,19 @@ a{
   /* DEBUG:  */
   padding: 0;
 }
+
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (max-width: 1199px) {
+@media (min-width: 992px) {
+  .hamburger-menu{
+    display: none;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .hamburger-menu{
+    display: none;
+  }
 }

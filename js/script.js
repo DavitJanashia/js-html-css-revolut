@@ -9,6 +9,9 @@ $('.parent-dropdown')
     $(this).children('.dropdown').hide();
   });
 
+$('.h-parent-dropdown').click(function(){
+  $(this).children('.h-dropdown').toggle();
+});
 
 // on click dropdown menu
 // $(document).ready(function() {
