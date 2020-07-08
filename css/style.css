@@ -121,7 +121,8 @@ a:hover{
   border-radius: 7px;
   display: none;
   /* nowrap è utile */
-  white-space: nowrap
+  white-space: nowrap;
+  z-index: 1;
 }
 .inner{
   width: 100%;
