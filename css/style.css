@@ -274,8 +274,28 @@ a:hover{
   justify-content: center;
   align-items: center;
   padding-top: 4rem;
+  position: relative;
+}
+.i-box{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  background-color: white;
+  box-shadow: 1px 0 9px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 26px;
+}
+.i-box i{
+  border: none;
+  position: relative;
+  left: 2px;
 }
 
+.i-box:hover{
+  cursor: pointer;
+}
 .main-right img{
   width: 500px;
   overflow: hidden;
@@ -423,6 +443,11 @@ a:hover{
   min-width: 300px;
   overflow: hidden;
 }
+
+.my-input, .clock{
+display: none;
+}
+
 }
 
 /* Large devices (desktops, 992px and up) */
