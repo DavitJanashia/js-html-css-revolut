@@ -10,17 +10,21 @@ $('.parent-dropdown')
   });
 
 $('.h-parent-dropdown').click(function(){
-  $(this).children('.h-dropdown').slideToggle();
-});
+  var myAct = $('.h-parent-dropdown');
 
-// on click dropdown menu
-// $(document).ready(function() {
-//
-//   $('.parent-dropdown').click(function() {
-//     $(this).children('.dropdown').toggleClass('hide, show');
-//   });
-//
-// });
+
+  if($(this).children('.h-dropdown').hasClass('ciao') == false){
+    $('.h-dropdown').removeClass('ciao');
+    $('.h-dropdown').slideUp();
+    $(this).children('.h-dropdown').addClass('ciao');
+    $(this).children('.h-dropdown').slideDown();
+  } else if ($(this).children('.h-dropdown').hasClass('ciao') == true){
+    $(this).children('.h-dropdown').removeClass('ciao');
+    $(this).children('.h-dropdown').slideUp();
+
+  }
+
+});
 
 
   $('.hamburger-icon').click(function() {
