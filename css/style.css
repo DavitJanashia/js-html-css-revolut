@@ -158,6 +158,7 @@ a:hover{
   left: 0;
   z-index: 1;
   background-color: white;
+  display: none;
 }
 
 .h-burger-fixed{
@@ -197,6 +198,21 @@ a:hover{
   font-size: 14px;
   transition: 0.2s;
 }
+
+#inizia-button{
+  background-color: #47494c;
+  padding: 13px 44px;
+  border-radius: 11px;
+  color: #848687;
+  font-size: 19px;
+  font-family: arial;
+  font-weight: 500;
+  transition: 0.2s;
+}
+#inizia-button:hover{
+  cursor:not-allowed
+}
+
 .my-carica-app-button:hover{
   color: white;
   background-color: #3d4043;
@@ -264,10 +280,54 @@ a:hover{
   width: 500px;
   overflow: hidden;
 }
+.my-input{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.my-input > *{
+  margin-right: 13px;
+}
+.my-input .my-select, .my-input input{
+  height: 30px;
+}
 
+.clock{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: arial;
+  font-size: 16px;
+}
 
+.my-input, .clock{
+  margin-top: 20px;
+}
 
-
+.my-select{
+  border-bottom: 1px solid #bac4ce;
+  width: 85px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #585a5c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+}
+.my-select i{
+  font-size: 15px;
+  color: #bac4ce;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-input input{
+  border: none;
+  border-bottom: 1px solid #bac4ce;
+  font-size: 15px;
+  width: 160px;
+}
 /* media query */
 
 /* Small devices (landscape phones, 576px and up) */
