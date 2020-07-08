@@ -448,6 +448,10 @@ a:hover{
 display: none;
 }
 
+.i-box{
+  display: none;
+}
+
 }
 
 /* Large devices (desktops, 992px and up) */
